@@ -17,6 +17,54 @@
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
       <script type="text/javascript" src="assets/javascript/app.js"></script>
+      <script> 
+        var timer = 30;
+  var correct = 0;
+  var incorrect = 0;
+
+  $('#start').on('click', run);
+
+  function reset() {
+    timer = 0;  
+
+  }
+
+  function run(){
+    counter = setInterval(decrement, 1000);
+  }
+  function decrement(){
+    timer--;
+    $('#time-left').html('<h2>Time Remaining: ' + timer + '</h2>');
+    if (timer === 0){
+      stop();
+      alert('Time Up!')
+    }
+  }
+  function stop(){
+      clearInterval(counter);
+    }
+  run();
+
+  $(document).ready(function() {
+    $("#done").click(function (e) {
+        var question1a = $('input:radio[name=comic]:checked').val();
+        var question2a = $('input:radio[name=comic1]:checked').val();
+        var question2a = $('input:radio[name=comic2]:checked').val();
+        var question2a = $('input:radio[name=comic3]:checked').val();
+        var question2a = $('input:radio[name=comic4]:checked').val();
+        var question2a = $('input:radio[name=comic5]:checked').val();
+        
+        if(question1a===undefined || question2a===undefined || question3a===undefined || question4a===undefined || question5a===undefined || question6a===undefined)
+            {
+                alert('Please select all options!');
+            }
+
+
+
+    });
+});
+
+      </script>
 
 
 
