@@ -2,7 +2,6 @@
  <html>
    <head>
      <title>Spidey Trivia</title>
-     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
    </head>
    <body>
@@ -11,13 +10,36 @@
      <h1>Totally Spidey Trivia!</h1>
 
      <div id="time-left"></div>
-     </br>
-
-     <button id="start"><h2>start</h2></button>
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-      <script type="text/javascript" src="assets/javascript/app.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+<script>
+  var timer = 30;
+  $('#start').on('click', run);
 
+  function reset() {
+    timer = 0;
+    
+
+  }
+
+  function run(){
+    counter = setInterval(decrement, 1000);
+  }
+  function decrement(){
+    timer--;
+    $('#time-left').html('<h2>Time Remaining: ' + timer + '</h2>');
+    if (timer === 0){
+      stop();
+      alert('Time Up!')
+    }
+  }
+  function stop(){
+      clearInterval(counter);
+    }
+  run();
+
+</script>
 
 
      </br>
@@ -99,13 +121,9 @@
 
 </div>
 </br>
-<button id="done"><h2>done</h2></button>
-<div id="correct1"></div>
-</br>
-<div id="incorrect1"></div>
 
-
-
+<div id="start"><h2>Start</h2>
+</div>
 
 
 

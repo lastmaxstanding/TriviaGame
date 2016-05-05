@@ -1,0 +1,50 @@
+body {
+	background-image: url('../images/background.png');
+	
+}
+
+div {
+	text-align: center;
+	color: #0000A0;
+	font-size: 20;
+	
+
+}
+
+input {
+	color: #0000A0;
+	font-size: 30;
+}
+
+button {
+	display: block;
+	margin: auto;
+}
+
+h1{
+	font-size: 50px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	text-align: center;
+	color: #FF0000;
+}
+
+h2 {
+	font-size: 30px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	text-align: center;
+	color: #FF0000;
+
+
+}
+
+h3 {
+	font-size: 30px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	text-align: center;
+	color: #FF0000;
+
+
+}
+
+
+
