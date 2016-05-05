@@ -18,7 +18,8 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
       <script type="text/javascript" src="assets/javascript/app.js"></script>
       <script> 
-        var timer = 30;
+        
+  var timer = 30;
   var correct = 0;
   var incorrect = 0;
 
@@ -34,7 +35,7 @@
   }
   function decrement(){
     timer--;
-    $('#time-left').html('<h2>Time Remaining: ' + timer + '</h2>');
+    $('#time-left').html('<h2>'+'Time Remaining:' + timer + '</h2>');
     if (timer === 0){
       stop();
       alert('Time Up!')
